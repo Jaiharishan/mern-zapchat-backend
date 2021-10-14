@@ -140,4 +140,21 @@ userRouter.post('/login', async (req, res) => {
 })
 
 
+// logout route
+
+userRouter.post('/logout', async (req, res) => {
+    try {
+        return res.status(200).json({
+            message: 'Logged Out successfully.'
+        })
+    }
+    catch {
+        console.log(err.message);
+        return res.status(500).json({
+        message: "Server Error, Try again later.",
+        });
+    }
+})
+
+
 module.exports = userRouter;
