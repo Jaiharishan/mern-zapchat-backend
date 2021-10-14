@@ -1,4 +1,3 @@
-const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 require("dotenv").config({ path: '../env/.env' });
 
@@ -51,7 +50,7 @@ const verifyJWT = (req, res, next) => {
 
             // the token data is set to the decoded data
             req.jwt_payload = decoded;
-            console.log(decoded);
+            // console.log(decoded);
 
             if (err) {
                 console.log('error ', err.message);
